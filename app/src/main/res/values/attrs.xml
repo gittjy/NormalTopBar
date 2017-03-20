@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NormalTopBar">
+        <!--中间标题属性-->
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="leftText" format="string"/>
+
+        <!--左边按钮属性-->
+        <attr name="leftTextSize" format="dimension"/>
+        <attr name="leftTextColor" format="color"/>
+        <attr name="leftImageSrc" format="reference"/>
+        <attr name="rightText" format="string"/>
+
+        <!--右边按钮属性-->
+        <attr name="rightTextSize" format="dimension"/>
+        <attr name="rightTextColor" format="color"/>
+        <attr name="leftBackground" format="color"/>
+        <attr name="rightBackground" format="color"/>
+        <attr name="rightImageSrc" format="reference"/>
+    </declare-styleable>
+</resources>
