@@ -1,4 +1,4 @@
-package com.android.tu.normaltopbar;
+package com.android.tu.topbarlibrary;
 
 import android.content.Context;
 import android.content.res.TypedArray;
