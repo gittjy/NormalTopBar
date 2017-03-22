@@ -3,9 +3,9 @@
 
     <declare-styleable name="NormalTopBar">
         <!--中间标题属性-->
-        <attr name="titleText" format="string"/>
-        <attr name="titleTextSize" format="dimension"/>
-        <attr name="titleTextColor" format="color"/>
+        <attr name="top_titleText" format="string"/>
+        <attr name="top_titleTextSize" format="dimension"/>
+        <attr name="top_titleTextColor" format="color"/>
         <attr name="leftText" format="string"/>
 
         <!--左边按钮属性-->

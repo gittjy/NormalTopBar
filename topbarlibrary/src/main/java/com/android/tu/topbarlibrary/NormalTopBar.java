@@ -178,9 +178,9 @@ public class NormalTopBar extends RelativeLayout{
         leftTextColor=typeArray.getColor(R.styleable.NormalTopBar_leftTextColor, Color.BLACK);
         leftTextSize=typeArray.getDimension(R.styleable.NormalTopBar_leftTextSize,12);
         leftImageId=typeArray.getResourceId(R.styleable.NormalTopBar_leftImageSrc,0);
-        titleText=typeArray.getString(R.styleable.NormalTopBar_titleText);
-        titleTextColor=typeArray.getColor(R.styleable.NormalTopBar_titleTextColor,Color.BLACK);
-        titleTextSize=typeArray.getDimension(R.styleable.NormalTopBar_titleTextSize,20);
+        titleText=typeArray.getString(R.styleable.NormalTopBar_top_titleText);
+        titleTextColor=typeArray.getColor(R.styleable.NormalTopBar_top_titleTextColor,Color.BLACK);
+        titleTextSize=typeArray.getDimension(R.styleable.NormalTopBar_top_titleTextSize,20);
         rightText=typeArray.getString(R.styleable.NormalTopBar_rightText);
         rightTextColor=typeArray.getColor(R.styleable.NormalTopBar_rightTextColor,Color.BLACK);
         rightTextSize=typeArray.getDimension(R.styleable.NormalTopBar_rightTextSize,12);

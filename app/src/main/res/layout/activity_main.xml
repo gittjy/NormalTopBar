@@ -12,8 +12,8 @@
         app:leftText="返回"
         app:leftTextColor="@android:color/white"
         app:leftImageSrc="@drawable/ic_chevron_left"
-        app:titleText="这就是标题"
-        app:titleTextColor="@android:color/white"
+        app:top_titleText="这就是标题"
+        app:top_titleTextColor="@android:color/white"
         app:rightImageSrc="@drawable/ic_check_white">
 
     </com.android.tu.topbarlibrary.NormalTopBar>
