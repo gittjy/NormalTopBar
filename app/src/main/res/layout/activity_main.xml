@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.android.tu.topbarlibrary.NormalTopBar
         android:id="@+id/normal_top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
-        app:leftText="返回"
-        app:leftTextColor="@android:color/white"
         app:leftImageSrc="@drawable/ic_chevron_left"
         app:top_titleText="这就是标题"
         app:top_titleTextColor="@android:color/white"
-        app:rightImageSrc="@drawable/ic_check_white">
-
+        app:rightImageSrc="@drawable/ic_star"
+        android:paddingRight="10dp">
     </com.android.tu.topbarlibrary.NormalTopBar>
 
-</RelativeLayout>
+    <com.android.tu.topbarlibrary.NormalTopBar
+        android:id="@+id/normal_top_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorAccent"
+        app:top_titleText="12345"
+        app:top_titleTextColor="@android:color/white"
+        app:leftText="返回"
+        android:padding="10dp"
+        app:leftTextColor="@android:color/white"
+        app:rightImageSrc="@drawable/ic_check_white">
+    </com.android.tu.topbarlibrary.NormalTopBar>
+
+    <com.android.tu.topbarlibrary.NormalTopBar
+        android:id="@+id/normal_top_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_bright"
+        app:top_titleText="54321"
+        app:top_titleTextColor="@android:color/white"
+        app:leftImageSrc="@drawable/ic_chevron_left"
+        android:paddingRight="10dp"
+        app:leftText="返回"
+        app:leftTextColor="@android:color/white"
+        app:rightText="提交"
+        app:rightTextColor="@android:color/white">
+    </com.android.tu.topbarlibrary.NormalTopBar>
+
+</LinearLayout>

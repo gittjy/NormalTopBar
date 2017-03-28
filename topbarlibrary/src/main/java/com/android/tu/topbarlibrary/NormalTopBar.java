@@ -24,6 +24,68 @@ public class NormalTopBar extends RelativeLayout{
 
     private float leftTextSize,titleTextSize,rightTextSize;
 
+    public String getLeftText() {
+        return leftTextView.getText().toString();
+    }
+
+    public void setLeftText(String leftText) {
+        leftTextView.setText(leftText);
+    }
+
+    public String getTitleText() {
+        return titleTextView.getText().toString();
+    }
+
+    public void setTitleText(String titleText) {
+        titleTextView.setText(titleText);
+    }
+
+    public String getRightText() {
+        return rightTextView.getText().toString();
+    }
+
+    public void setRightText(String rightText) {
+        rightTextView.setText(rightText);
+    }
+
+    public void setLeftImageId(int leftImageId) {
+        leftImage.setImageResource(leftImageId);
+    }
+
+    public void setRightImageId(int rightImageId) {
+        rightImage.setImageResource(rightImageId);
+    }
+
+
+    public void setLeftTextColor(int leftTextColor) {
+        leftTextView.setTextColor(leftTextColor);
+    }
+
+
+    public void setTitleTextColor(int titleTextColor) {
+        titleTextView.setTextColor(titleTextColor);
+    }
+
+
+    public void setRightTextColor(int rightTextColor) {
+        rightTextView.setTextColor(rightTextColor);
+    }
+
+
+    public void setLeftTextSize(float leftTextSize) {
+        leftTextView.setTextSize(leftTextSize);
+    }
+
+
+    public void setTitleTextSize(float titleTextSize) {
+        titleTextView.setTextSize(titleTextSize);
+    }
+
+
+    public void setRightTextSize(float rightTextSize) {
+        rightTextView.setTextSize(rightTextSize);
+    }
+
     private TextView leftTextView, rightTextView;
 
     private ImageView leftImage,rightImage;
