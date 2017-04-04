@@ -18,7 +18,7 @@ public class NormalTopBar extends RelativeLayout{
 
     private String leftText,titleText,rightText;
 
-    private int leftImageId,rightImageId;
+    private int leftImageId,rightImageId,titleImageId;
 
     private int leftTextColor,titleTextColor,rightTextColor;
 
@@ -88,13 +88,26 @@ public class NormalTopBar extends RelativeLayout{
 
     private TextView leftTextView, rightTextView;
 
-    private ImageView leftImage,rightImage;
+
+    private ImageView leftImage;
+    private ImageView rightImage;
+    private ImageView titleImage;
+
+    public ImageView getLeftImage() {
+        return leftImage;
+    }
+
+    public ImageView getRightImage() {
+        return rightImage;
+    }
+
+    public ImageView getTitleImage() {
+        return titleImage;
+    }
 
     private TextView titleTextView;
 
-    private LayoutParams leftImageParams, leftTextParams,titleParams, rightTextParams,rightImageParams;
-
-    private boolean isLeftVisible,isRightVisible;
+    private LayoutParams leftImageParams, leftTextParams,titleParams,titleImageParams, rightTextParams,rightImageParams;
 
     private normalTopClickListener mClickListener;
 
@@ -145,6 +158,21 @@ public class NormalTopBar extends RelativeLayout{
             }
         });
 
+        titleTextView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mClickListener.onTitleClick(view);
+            }
+        });
+
+        titleImage.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mClickListener.onTitleClick(view);
+            }
+        });
+
+
     }
 
     private void addAllView(Context context) {
@@ -153,6 +181,7 @@ public class NormalTopBar extends RelativeLayout{
         titleTextView=new TextView(context);
         leftImage=new ImageView(context);
         rightImage=new ImageView(context);
+        titleImage=new ImageView(context);
 
         leftImage.setId(R.id.leftimageid);
         leftImage.setImageResource(leftImageId);
@@ -162,10 +191,13 @@ public class NormalTopBar extends RelativeLayout{
         leftTextView.setTextSize(leftTextSize);
         leftTextView.setTextColor(leftTextColor);
 
+        titleTextView.setId(R.id.titleTextViewid);
         titleTextView.setText(titleText);
         titleTextView.setTextSize(titleTextSize);
         titleTextView.setTextColor(titleTextColor);
         titleTextView.setGravity(Gravity.CENTER);//一定要设置textview内容的位置
+
+        titleImage.setImageResource(titleImageId);
 
         rightTextView.setText(rightText);
         rightTextView.setTextSize(rightTextSize);
@@ -208,6 +240,11 @@ public class NormalTopBar extends RelativeLayout{
         titleParams.addRule(TEXT_ALIGNMENT_CENTER);
         addView(titleTextView,titleParams);
 
+        titleImageParams=new LayoutParams(dpToPx(context,35),dpToPx(context,35));
+        titleImageParams.addRule(RelativeLayout.RIGHT_OF,R.id.titleTextViewid);
+        titleImageParams.addRule(CENTER_VERTICAL,TRUE);
+        addView(titleImage,titleImageParams);
+
         if(rightImageId!=0&&rightText!=null){
             rightTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             rightTextParams.addRule(RelativeLayout.LEFT_OF,R.id.rightimageid);
@@ -243,6 +280,7 @@ public class NormalTopBar extends RelativeLayout{
         titleText=typeArray.getString(R.styleable.NormalTopBar_top_titleText);
         titleTextColor=typeArray.getColor(R.styleable.NormalTopBar_top_titleTextColor,Color.BLACK);
         titleTextSize=typeArray.getDimension(R.styleable.NormalTopBar_top_titleTextSize,20);
+        titleImageId=typeArray.getResourceId(R.styleable.NormalTopBar_top_titleImageSrc,0);
         rightText=typeArray.getString(R.styleable.NormalTopBar_rightText);
         rightTextColor=typeArray.getColor(R.styleable.NormalTopBar_rightTextColor,Color.BLACK);
         rightTextSize=typeArray.getDimension(R.styleable.NormalTopBar_rightTextSize,12);
@@ -260,6 +298,8 @@ public class NormalTopBar extends RelativeLayout{
         void onLeftClick(View view);
 
         void onRightClick(View view);
+
+        void onTitleClick(View view);
 
     }
 

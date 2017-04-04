@@ -42,7 +42,8 @@
         app:leftText="返回"
         app:leftTextColor="@android:color/white"
         app:rightText="提交"
-        app:rightTextColor="@android:color/white">
+        app:rightTextColor="@android:color/white"
+        app:top_titleImageSrc="@drawable/ic_chevron_right">
     </com.android.tu.topbarlibrary.NormalTopBar>
 
 </LinearLayout>

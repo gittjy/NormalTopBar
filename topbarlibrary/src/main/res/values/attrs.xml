@@ -7,6 +7,7 @@
         <attr name="top_titleTextSize" format="dimension"/>
         <attr name="top_titleTextColor" format="color"/>
         <attr name="leftText" format="string"/>
+        <attr name="top_titleImageSrc" format="reference"/>
 
         <!--左边按钮属性-->
         <attr name="leftTextSize" format="dimension"/>

@@ -2,4 +2,5 @@
 <resources>
     <item name="leftimageid" type="id"/>
     <item name="rightimageid" type="id"/>
+    <item name="titleTextViewid" type="id"/>
 </resources>

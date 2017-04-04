@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }).show();
             }
+
+            @Override
+            public void onTitleClick(View view) {
+                Toast.makeText(MainActivity.this,"标题也可以",Toast.LENGTH_SHORT).show();
+            }
         });
         normalTopBar1.setTopClickListener(new NormalTopBar.normalTopClickListener() {
             @Override
@@ -54,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
             public void onRightClick(View view) {
                 normalTopBar1.setTitleText("更改后的标题");
             }
+
+            @Override
+            public void onTitleClick(View view) {
+
+            }
         });
         normalTopBar2.setTopClickListener(new NormalTopBar.normalTopClickListener() {
             @Override
@@ -63,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onRightClick(View view) {
+
+            }
+
+            @Override
+            public void onTitleClick(View view) {
 
             }
         });
