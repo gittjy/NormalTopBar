@@ -26,4 +26,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'com.android.support:design:25.1.1'
     compile project(':topbarlibrary')
+    compile 'com.github.gittjy:LoadingDialog:1.0.2'
 }

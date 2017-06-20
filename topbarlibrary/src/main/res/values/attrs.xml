@@ -10,13 +10,11 @@
         <attr name="top_titleImageSrc" format="reference"/>
 
         <!--左边按钮属性-->
-        <attr name="leftTextSize" format="dimension"/>
         <attr name="leftTextColor" format="color"/>
         <attr name="leftImageSrc" format="reference"/>
         <attr name="rightText" format="string"/>
 
         <!--右边按钮属性-->
-        <attr name="rightTextSize" format="dimension"/>
         <attr name="rightTextColor" format="color"/>
         <attr name="leftBackground" format="color"/>
         <attr name="rightBackground" format="color"/>

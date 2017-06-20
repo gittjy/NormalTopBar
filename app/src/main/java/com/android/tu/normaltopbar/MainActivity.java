@@ -1,11 +1,14 @@
 package com.android.tu.normaltopbar;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.android.tu.loadingdialog.LoadingDialog;
 import com.android.tu.topbarlibrary.NormalTopBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,6 +21,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        LoadingDialog.Builder loadBuilder=new LoadingDialog.Builder(this)
+                .setMessage("嘿嘿...")
+                .setShowMessage(true)
+                .setCancelable(true)
+                .setCancelOutside(true);
+        final LoadingDialog dialog=loadBuilder.create();
+        dialog.show();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dialog.dismiss();
+            }
+        },2000);
+
         normalTopBar= (NormalTopBar) findViewById(R.id.normal_top);
         normalTopBar1= (NormalTopBar) findViewById(R.id.normal_top_1);
         normalTopBar2= (NormalTopBar) findViewById(R.id.normal_top_2);
@@ -73,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onRightClick(View view) {
+                Toast.makeText(MainActivity.this,"提交",Toast.LENGTH_SHORT).show();
 
             }
 
@@ -83,4 +102,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
 }

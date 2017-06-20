@@ -25,7 +25,7 @@
         app:top_titleText="12345"
         app:top_titleTextColor="@android:color/white"
         app:leftText="返回"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
         app:leftTextColor="@android:color/white"
         app:rightImageSrc="@drawable/ic_check_white">
     </com.android.tu.topbarlibrary.NormalTopBar>

@@ -217,10 +217,10 @@ public class NormalTopBar extends RelativeLayout{
             leftImageParams.addRule(CENTER_VERTICAL,TRUE);
             addView(leftImage,leftImageParams);
 
-            leftTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            leftTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
             leftTextParams.addRule(RelativeLayout.RIGHT_OF,R.id.leftimageid);
             leftTextParams.addRule(CENTER_VERTICAL,TRUE);
-            leftTextView.setGravity(Gravity.LEFT);
+            leftTextView.setGravity(Gravity.CENTER_VERTICAL);
             addView(leftTextView, leftTextParams);
         }else if(leftImageId!=0&&leftText==null){
             leftImageParams=new LayoutParams(dpToPx(context,35), dpToPx(context,35));
@@ -228,10 +228,13 @@ public class NormalTopBar extends RelativeLayout{
             leftImageParams.addRule(CENTER_VERTICAL,TRUE);
             addView(leftImage,leftImageParams);
         }else{
-            leftTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            leftTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
             leftTextParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT,TRUE);
-            leftTextParams.addRule(CENTER_VERTICAL,TRUE);
+            leftTextParams.addRule(RelativeLayout.CENTER_VERTICAL,TRUE);
+            leftTextView.setGravity(Gravity.CENTER_VERTICAL);
+            leftTextView.setPadding(15,5,15,5);
             addView(leftTextView, leftTextParams);
+
         }
 
 
@@ -246,10 +249,10 @@ public class NormalTopBar extends RelativeLayout{
         addView(titleImage,titleImageParams);
 
         if(rightImageId!=0&&rightText!=null){
-            rightTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            rightTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
             rightTextParams.addRule(RelativeLayout.LEFT_OF,R.id.rightimageid);
             rightTextParams.addRule(RelativeLayout.CENTER_VERTICAL,TRUE);
-            rightTextView.setGravity(Gravity.RIGHT);
+            rightTextView.setGravity(Gravity.CENTER_VERTICAL);
             addView(rightTextView, rightTextParams);
             rightImageParams=new LayoutParams(dpToPx(context,35), dpToPx(context,35));
             rightImageParams.addRule(CENTER_VERTICAL,TRUE);
@@ -261,9 +264,11 @@ public class NormalTopBar extends RelativeLayout{
             rightImageParams.addRule(ALIGN_PARENT_RIGHT,TRUE);
             addView(rightImage,rightImageParams);
         }else{
-            rightTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            rightTextParams =new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.MATCH_PARENT);
             rightTextParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT,TRUE);
             rightTextParams.addRule(RelativeLayout.CENTER_VERTICAL,TRUE);
+            rightTextView.setGravity(Gravity.CENTER_VERTICAL);
+            rightTextView.setPadding(15,5,15,5);
             addView(rightTextView, rightTextParams);
         }
 
@@ -275,7 +280,7 @@ public class NormalTopBar extends RelativeLayout{
 
         leftText=typeArray.getString(R.styleable.NormalTopBar_leftText);
         leftTextColor=typeArray.getColor(R.styleable.NormalTopBar_leftTextColor, Color.BLACK);
-        leftTextSize=typeArray.getDimension(R.styleable.NormalTopBar_leftTextSize,12);
+        leftTextSize=15;
         leftImageId=typeArray.getResourceId(R.styleable.NormalTopBar_leftImageSrc,0);
         titleText=typeArray.getString(R.styleable.NormalTopBar_top_titleText);
         titleTextColor=typeArray.getColor(R.styleable.NormalTopBar_top_titleTextColor,Color.BLACK);
@@ -283,7 +288,7 @@ public class NormalTopBar extends RelativeLayout{
         titleImageId=typeArray.getResourceId(R.styleable.NormalTopBar_top_titleImageSrc,0);
         rightText=typeArray.getString(R.styleable.NormalTopBar_rightText);
         rightTextColor=typeArray.getColor(R.styleable.NormalTopBar_rightTextColor,Color.BLACK);
-        rightTextSize=typeArray.getDimension(R.styleable.NormalTopBar_rightTextSize,12);
+        rightTextSize=15;
         rightImageId=typeArray.getResourceId(R.styleable.NormalTopBar_rightImageSrc,0);
 
         typeArray.recycle();//获取完所有属性后需要调用recycle来避免重新创建发生的错误
